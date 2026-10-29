@@ -4,11 +4,14 @@ Project tasks on a timeline that users reschedule by dragging, saved with your o
 
 ![Gantt Chart](screenshots/preview.png)
 
+**[Live demo](https://oracleapex.com/ords/r/aamirkhanz/plugins/gantt)**: sign in as `demo` with the password `Demo`.
+
 | | |
 |---|---|
 | **Type** | Region plug-in |
 | **Internal name** | `COM.TECHREVX.GANTT` |
 | **Version** | 1.0 |
+| **Live demo** | [oracleapex.com/ords/r/aamirkhanz/plugins/gantt](https://oracleapex.com/ords/r/aamirkhanz/plugins/gantt) (user `demo`, password `Demo`) |
 | **Requires** | Oracle APEX 26.2 or later |
 | **License** | MIT |
 
