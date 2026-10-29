@@ -1,0 +1,85 @@
+/* Gantt Chart region plug-in (TechRevX, www.techrevx.com): Frappe Gantt in Universal Theme colors */
+.tx-Gantt {
+  --tx-gt-bg: var(--ut-component-background-color, #fff);
+  --tx-gt-line: var(--ut-component-border-color, rgba(0, 0, 0, .12));
+  --tx-gt-text: var(--ut-component-text-default-color, #1f2333);
+  --tx-gt-muted: var(--ut-component-text-muted-color, #6b7080);
+  --tx-gt-accent: var(--ut-palette-primary, #3442a8);
+
+  /* Frappe Gantt's own variables */
+  --g-bar-color: color-mix(in srgb, var(--tx-gt-accent) 20%, var(--tx-gt-bg));
+  --g-bar-border: transparent;
+  --g-progress-color: var(--tx-gt-accent);
+  --g-expected-progress: color-mix(in srgb, var(--tx-gt-accent) 45%, var(--tx-gt-bg));
+  --g-arrow-color: color-mix(in srgb, var(--tx-gt-text) 55%, transparent);
+  --g-handle-color: var(--tx-gt-text);
+  --g-text-dark: var(--tx-gt-text);
+  --g-text-light: #fff;
+  --g-text-muted: var(--tx-gt-muted);
+  --g-header-background: var(--tx-gt-bg);
+  --g-row-color: var(--tx-gt-bg);
+  --g-row-border-color: var(--tx-gt-line);
+  --g-border-color: var(--tx-gt-line);
+  --g-tick-color: color-mix(in srgb, var(--tx-gt-text) 6%, transparent);
+  --g-tick-color-thick: color-mix(in srgb, var(--tx-gt-text) 13%, transparent);
+  --g-weekend-highlight-color: color-mix(in srgb, var(--tx-gt-text) 3.5%, var(--tx-gt-bg));
+  --g-weekend-label-color: color-mix(in srgb, var(--tx-gt-text) 10%, transparent);
+  --g-today-highlight: #d64545;
+  --g-actions-background: color-mix(in srgb, var(--tx-gt-text) 5%, var(--tx-gt-bg));
+  --g-popup-actions: var(--tx-gt-line);
+  color: var(--tx-gt-text);
+}
+
+.tx-Gantt-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+.tx-Gantt-views {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--tx-gt-line);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--tx-gt-text) 3%, var(--tx-gt-bg));
+}
+.tx-Gantt-view,
+.tx-Gantt-today {
+  height: 30px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--tx-gt-muted);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tx-Gantt-view:hover,
+.tx-Gantt-today:hover { color: var(--tx-gt-text); }
+.tx-Gantt-view[aria-pressed="true"] { background: var(--tx-gt-bg); color: var(--tx-gt-text); box-shadow: 0 1px 2px rgba(16, 19, 34, .12); }
+.tx-Gantt-today { display: inline-flex; align-items: center; gap: 6px; height: 38px; border: 1px solid var(--tx-gt-line); border-radius: 9px; }
+.tx-Gantt .tx-Gantt-today .fa { font-size: 13px; }
+.tx-Gantt-view:focus-visible,
+.tx-Gantt-today:focus-visible { outline: 2px solid var(--tx-gt-accent); outline-offset: 1px; }
+.tx-Gantt-status { margin-left: auto; color: var(--tx-gt-muted); font-size: 13px; }
+
+.tx-Gantt-chart .gantt-container {
+  border: 1px solid var(--tx-gt-line);
+  border-radius: 10px;
+  background: var(--tx-gt-bg);
+  font-family: inherit;
+}
+.tx-Gantt-chart[hidden], .tx-Gantt-empty[hidden] { display: none; }
+.tx-Gantt-chart .gantt .bar-label { font-weight: 600; }
+.tx-Gantt-chart .gantt .bar-label.big { fill: var(--tx-gt-text); }
+.tx-Gantt-chart .gantt .bar-wrapper:focus { outline: none; }
+.tx-Gantt-chart .gantt-container .popup-wrapper { border: 1px solid var(--tx-gt-line); border-radius: 10px; color: var(--tx-gt-text); }
+
+.tx-Gantt-empty { padding: 32px 16px; border: 1px dashed var(--tx-gt-line); border-radius: 10px; color: var(--tx-gt-muted); text-align: center; }
+
+/* the task table is for screen readers only */
+.tx-Gantt-srTable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

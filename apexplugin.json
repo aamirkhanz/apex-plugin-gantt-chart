@@ -1,0 +1,47 @@
+{
+  "name": "Gantt Chart",
+  "version": "1.0",
+  "description": "<p>Project tasks on a timeline that users reschedule by dragging, saved with your own PL/SQL.</p><p>Source: any region source with one row per task. Map ID, Name, Start and End; Progress, Dependencies, Color and Description are optional. Timeline: Hour, Quarter Day, Half Day, Day, Week, Month and Year views with view buttons, a Today button, today's line, weekend shading, dependency arrows, expected progress and a details popup. Editing: drag a bar to move it, drag its ends to change its length, drag the handle to change progress; tasks that depend on it move along. The Save Code gets :ID, :START_DATE, :END_DATE and :PROGRESS; if it fails the task goes back and its message is shown.</p><p>Requires Oracle APEX 26.2 or later. Documentation, updates and more plug-ins: https://www.techrevx.com</p>",
+  "keywords": [
+    "oracle",
+    "apex",
+    "plugin",
+    "techrevx",
+    "gantt",
+    "timeline",
+    "project",
+    "schedule",
+    "tasks",
+    "dependencies"
+  ],
+  "homepage": "https://github.com/aamirkhanz/apex-plugin-gantt-chart",
+  "bugs": {
+    "url": "https://github.com/aamirkhanz/apex-plugin-gantt-chart/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "TechRevX",
+    "url": "https://www.techrevx.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aamirkhanz/apex-plugin-gantt-chart.git"
+  },
+  "oracle": {
+    "versions": [
+      "19c",
+      "21c",
+      "23ai"
+    ],
+    "apex": {
+      "versions": [
+        "26.2"
+      ],
+      "plugin": {
+        "internalName": "COM.TECHREVX.GANTT",
+        "type": "region",
+        "previewImage": "https://raw.githubusercontent.com/aamirkhanz/apex-plugin-gantt-chart/main/screenshots/preview.png"
+      }
+    }
+  }
+}
